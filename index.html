@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form onsubmit="event.preventDefault(), updateProduct()">
+                            <div>
+                                <label for="name" >Nombre del producto</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="price" >Precio</label>
+                                <input type="number" class="form-control" id="price"></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="image-url" >url de la imagen</label>
+                                <input type="text" class="form-control" id="image-url"></input>
+                            </div>
+                            <button type="submit" class="submit-button btn btn-secondary">Actualizar</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-5">
+            <button  class="submit-button btn btn-secondary" onclick="createProduct()">Crear Producto</button>
+        </div>
+        <div class="row" id="products-container">
+            <!-- Aquí van los productos -->
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/50ead72691.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
